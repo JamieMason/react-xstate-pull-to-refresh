@@ -1,0 +1,158 @@
+/* 
+https://www.materialui.co/colors
+
+BLUE 100 #bbdefb
+GREEN 100 #c8e6c9
+RED 100 #ffcdd2
+*/
+
+.circle {
+  fill: #ebf4ff;
+}
+
+.arrow {
+  fill: none;
+  stroke: #bbdefb;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  visibility: hidden;
+}
+
+.pending .arrow {
+  animation-name: EnterArrow;
+  animation-fill-mode: forwards;
+  visibility: visible;
+}
+
+@keyframes EnterArrow {
+  /* Delay */
+  0% {
+    opacity: 0;
+    transform: translateY(-65px);
+  }
+  /* Enter */
+  30% {
+    opacity: 0;
+    transform: translateY(-65px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  /* Exit */
+  90% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(65px);
+  }
+}
+
+.progress {
+  fill: none;
+  stroke: #bbdefb;
+  stroke-width: 10;
+}
+
+.pending .progress {
+  animation-name: FillProgress;
+  animation-fill-mode: forwards;
+}
+
+.resolved .progress,
+.rejected .progress {
+  stroke-width: 25;
+  stroke-dasharray: 180 180;
+}
+
+.resolved .progress {
+  stroke: #c8e6c9;
+}
+
+.rejected .progress {
+  stroke: #ffcdd2;
+}
+
+.restoring .progress {
+  animation-name: ExitProgress;
+}
+
+@keyframes FillProgress {
+  0% {
+    stroke-width: 25;
+    stroke-dasharray: 1 179;
+  }
+  100% {
+    stroke-width: 25;
+    stroke-dasharray: 180 180;
+  }
+}
+
+@keyframes ExitProgress {
+  0% {
+    stroke-width: 25;
+    stroke-dasharray: 180 180;
+  }
+  100% {
+    stroke-width: 10;
+    stroke-dasharray: 180 180;
+  }
+}
+
+.tick {
+  visibility: hidden;
+}
+
+.resolved .tick {
+  animation-name: Tick;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  fill: none;
+  stroke-dasharray: 31 82;
+  stroke-dasharray: none;
+  stroke-dashoffset: -47px;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 4;
+  stroke-width: 4;
+  stroke: #c8e6c9;
+  visibility: visible;
+}
+
+@keyframes Tick {
+  0% {
+    stroke-dasharray: 1 82;
+    stroke-dashoffset: 0px;
+  }
+  29% {
+    stroke-dasharray: 1 82;
+    stroke-dashoffset: 0px;
+  }
+  35% {
+    stroke-dasharray: 31 82;
+    stroke-dashoffset: -50px;
+  }
+  62% {
+    stroke-dasharray: 31 82;
+    stroke-dashoffset: -50px;
+  }
+  68% {
+    stroke-dasharray: 31 82;
+    stroke-dashoffset: -50px;
+  }
+  100% {
+    stroke-dasharray: 31 82;
+    stroke-dashoffset: -50px;
+  }
+}
+
+.cross {
+  visibility: hidden;
+  fill: #ffcdd2;
+}
+
+.rejected .cross {
+  visibility: visible;
+}

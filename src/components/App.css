@@ -1,0 +1,21 @@
+html,
+body {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  scrollbar-width: none;
+}
+
+.overflow-auto::-webkit-scrollbar {
+  display: none;
+}
+
+.rounded-xl {
+  border-radius: 1rem;
+}
+
+.footer__link {
+  color: #3182ce;
+  text-decoration: underline;
+}

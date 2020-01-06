@@ -1,0 +1,39 @@
+{
+  "name": "pull-to-refresh-in-xstate-react-and-tailwind",
+  "description": "Pull to refresh for web, supports touch and mouse events and is implemented using https://xstate.js.org.",
+  "version": "1.0.0",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "@types/faker": "4.1.0",
+    "@xstate/react": "0.8.1",
+    "faker": "4.1.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "xstate": "4.7.5"
+  },
+  "devDependencies": {
+    "@types/react": "16.9.17",
+    "@types/react-dom": "16.9.4",
+    "react-scripts": "3.0.1",
+    "typescript": "3.3.3"
+  },
+  "keywords": [
+    "animation",
+    "app",
+    "react",
+    "tailwind",
+    "xstate"
+  ],
+  "main": "src/index.tsx",
+  "scripts": {
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
+  }
+}
